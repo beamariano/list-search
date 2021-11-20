@@ -1,0 +1,152 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f5f5;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: gray;
+}
+/* * {
+  border: 1px solid gold;
+} */
+
+/* SIDE MENU */
+.side-menu {
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+.user-logo-box {
+  width: 100%;
+  padding: 20px 0;
+}
+.user-logo {
+  width: 100%;
+}
+.menu-links-box {
+  margin-left: 20px;
+}
+.nav-link {
+  margin: 10px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-link > img {
+  margin-right: 10px;
+  height: 20px;
+}
+
+.company-logo-box {
+  height: 5vh;
+  padding: 5px;
+  background-color: rgb(214, 214, 214);
+}
+.company-logo-box > img {
+  height: 90%;
+  /* padding: 5px; */
+}
+
+/* DISPLAY SCREEN */
+.display-screen {
+  width: 84vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.display-top {
+  height: 220px;
+  margin-bottom: 2px solid white;
+  background-color: rgba(241, 241, 241, 0.712);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
+  height: 50px;
+}
+.add-icon {
+  height: 30px;
+}
+.add-icon > img {
+  height: 100%;
+}
+
+.search-container {
+  z-index: 10;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  /* height: 20vh; */
+}
+.searchbar-box {
+  text-align: left;
+  align-self: center;
+}
+.searchbar {
+  width: 635px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.filters-box {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  text-align: left;
+  margin-top: 20px;
+}
+.filter {
+  width: 200px;
+  margin: 10px;
+}
+.select-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* select {
+  width: 200px;
+} */
+
+/* DATA DISPLAY */
+.data-table {
+  /* border: 1px solid gold; */
+  z-index: -10;
+  height: 70vh;
+  overflow: auto;
+  padding: 100px 50px;
+}
+.table-heading {
+  height: 10px;
+}
+.data-rows {
+  /* height: 70vh; */
+  overflow: auto;
+}
+
+footer {
+  height: 5vh;
+  background-color: #eeeeee;
+  /* width: 80vw; */
+  z-index: 5;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #2a2a2a;
+}
+
+a:visited {
+  font-weight: normal;
+}
