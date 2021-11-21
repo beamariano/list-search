@@ -1,15 +1,16 @@
-import myData from "../assets/sample-data.json";
+import hospitalData from "../assets/sample-data.json";
+import provinces from "../assets/provinces.json";
+import regions from "../assets/regions.json";
 
 const initialState = {
-  data: myData,
+  data: hospitalData,
+  regions: regions,
+  provinces: provinces,
+  cities: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    // case "A":
-    // // code here;
-
-    //DON'T DELETE THIS:
     default:
       return state;
   }

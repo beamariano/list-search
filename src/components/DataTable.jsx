@@ -1,33 +1,35 @@
 import React from "react";
-import { useSelector } from "react-redux";
-
-const DataTable = () => {
-  const data = useSelector((state) => state.data);
-  console.log(data);
+const DataTable = (props) => {
   return (
     <div className="data-table">
       <table>
-        <thead className="table-heading">
-          <tr>
-            <th>NAME</th>
-            <th>CONTACT</th>
-            <th>CITY</th>
-            <th>ADDRESS</th>
-            <th>USERNAME</th>
+        <thead>
+          <tr className="table-heading">
+            <th className="hospital-name">NAME</th>
+            <th className="email">EMAIL</th>
+            <th className="city">CITY</th>
+            <th className="province">PROVINCE</th>
+            <th className="region">REGION</th>
+            <th className="username">USERNAME</th>
           </tr>
         </thead>
-        <tbody className="data-rows">
-          {/* rows of data */}
-          {data.map((item, index) => (
-            <tr key={index}>
-              <td>{item.name}</td>
-
-              <td>{item.email}</td>
-              <td>{item.city}</td>
-              <td>{item.address}</td>
-              <td>{item.username.toLowerCase()}</td>
+        <tbody className="table-body">
+          {props.dataToRender.length === 0 ? (
+            <tr className="empty-display">
+              <td colSpan="6">NO ITEMS TO DISPLAY</td>
             </tr>
-          ))}
+          ) : (
+            props.dataToRender.map((item, index) => (
+              <tr key={index} className="table-row" id={item.name}>
+                <td className="hospital-name">{item.name}</td>
+                <td className="email">{item.email}</td>
+                <td className="city">{item.city}</td>
+                <td className="province">{item.province}</td>
+                <td className="region">{item.region}</td>
+                <td className="username">{item.username}</td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>
